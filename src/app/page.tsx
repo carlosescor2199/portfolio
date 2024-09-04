@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { Questrial } from "next/font/google";
+import Link from "next/link";
+import { ArrowDownTrayIcon, BriefcaseIcon, IdentificationIcon } from "@heroicons/react/24/outline";
 
 const questrial = Questrial({ weight: "400", subsets: ["latin"] });
 
@@ -97,6 +99,82 @@ export default function Home() {
             professional growth, I like to guide new tech enthusiasts, helping them to learn and navigate in this
             constantly evolving world.
           </motion.p>
+
+          <motion.div className="mt-10 flex justify-center gap-8">
+            <motion.button
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -20,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { delay: 1.7, duration: 0.5, ease: "linear" },
+                },
+              }}
+              whileHover={{ scale: 1.1 }}
+              className={cn(
+                "mt-10 rounded-md bg-yellow-300 px-4 py-2 text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
+              )}
+            >
+              <Link href="/about">
+                {" "}
+                <IdentificationIcon className="inline h-5 w-5" /> More about me
+              </Link>
+            </motion.button>
+
+            <motion.button
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -20,
+                },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 1.9, duration: 0.5, ease: "linear" },
+                },
+              }}
+              whileHover={{ scale: 1.1 }}
+              className={cn(
+                "mt-10 rounded-md bg-green-400 px-4 py-2 text-white",
+                "hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
+              )}
+            >
+              <Link href="/contact">
+                <BriefcaseIcon className="inline h-5 w-5" /> Hire me
+              </Link>
+            </motion.button>
+
+            <motion.a
+              href="/Resume_Carlos_Escudero.pdf"
+              download
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 20,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: { delay: 2.1, duration: 0.5, ease: "linear" },
+                },
+              }}
+              whileHover={{ scale: 1.1 }}
+              className={cn(
+                "mt-10 rounded-md bg-blue-400 px-4 py-2 text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
+              )}
+            >
+              <ArrowDownTrayIcon className="inline h-5 w-5" /> Download Resume
+            </motion.a>
+          </motion.div>
         </div>
       </motion.div>
     </main>
