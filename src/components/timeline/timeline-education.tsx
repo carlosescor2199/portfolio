@@ -7,7 +7,7 @@ export function TimelineEducation({ items }: { items: Education[] }) {
     <motion.ol
       initial={{ y: 50, opacity: 0 }}
       animate="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true }}
       transition={{ duration: 1, delay: 0.7 }}
       whileInView={{ y: 0, opacity: 1 }}
       className="relative border-l border-gray-200 dark:border-gray-700"
