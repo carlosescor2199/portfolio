@@ -25,7 +25,7 @@ export default function Home() {
             transition: { delay: 0.3, duration: 0.6, ease: "backInOut" },
           },
         }}
-        className={cn("flex flex-1 flex-col p-24 pb-5")}
+        className={cn("flex flex-1 flex-col p-8 pb-5 xl:p-24")}
       >
         <div className={cn("relative mb-12 flex flex-col items-center justify-center text-center")}>
           <motion.img
@@ -100,7 +100,7 @@ export default function Home() {
             constantly evolving world.
           </motion.p>
 
-          <motion.div className="mt-10 flex justify-center gap-8">
+          <motion.div className="mt-10 flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-8">
             <motion.button
               initial="hidden"
               animate="visible"
@@ -117,7 +117,7 @@ export default function Home() {
               }}
               whileHover={{ scale: 1.1 }}
               className={cn(
-                "mt-10 rounded-md bg-yellow-300 px-4 py-2 text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
+                "w-full rounded-md bg-yellow-300 px-4 py-2 text-white hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 md:w-auto",
               )}
             >
               <Link href="/about">
@@ -142,7 +142,7 @@ export default function Home() {
               }}
               whileHover={{ scale: 1.1 }}
               className={cn(
-                "mt-10 rounded-md bg-green-400 px-4 py-2 text-white",
+                "w-full rounded-md bg-green-400 px-4 py-2 text-white md:w-auto",
                 "hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
               )}
             >
@@ -169,7 +169,7 @@ export default function Home() {
               }}
               whileHover={{ scale: 1.1 }}
               className={cn(
-                "mt-10 rounded-md bg-blue-400 px-4 py-2 text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
+                "w-full rounded-md bg-blue-400 px-4 py-2 text-center text-white hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 md:w-auto",
               )}
             >
               <ArrowDownTrayIcon className="inline h-5 w-5" /> Download Resume
