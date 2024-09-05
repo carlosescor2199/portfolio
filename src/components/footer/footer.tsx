@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import moment from "moment";
+import Link from "next/link";
 import { JSX, SVGProps } from "react";
 
 const navigation = {
@@ -74,17 +75,17 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
         <div className="flex justify-center xl:gap-8">
           <div className="flex flex-col items-center space-y-8">
             <img alt="Carlos Escudero" src="/logo/1.png" className="h-28 w-28 text-center" />
             <p className="text-sm text-gray-600">Creating solutions, overcoming limits.</p>
             <div className="flex justify-center space-x-6">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                <Link key={item.name} href={item.href} target="_blank" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="h-6 w-6" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
