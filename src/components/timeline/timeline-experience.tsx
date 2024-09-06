@@ -20,7 +20,7 @@ export const TimelineExperience = ({ items }: { items: WorkExperience[] }) => {
               initial={{ y: -50, opacity: 0 }}
               animate="visible"
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1, delay: (index + 1) * 0.7 }}
+              transition={{ duration: 1, delay: (index + 1) * 0.5 }}
               whileInView={{ y: 0, opacity: 1 }}
               className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"
             />
@@ -28,7 +28,7 @@ export const TimelineExperience = ({ items }: { items: WorkExperience[] }) => {
               initial={{ y: -50, opacity: 0 }}
               animate="visible"
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 1, delay: (index + 1) * 0.7 }}
+              transition={{ duration: 1, delay: (index + 1) * 0.3 }}
               whileInView={{ y: 0, opacity: 1 }}
             >
               <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
