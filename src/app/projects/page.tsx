@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import { ContactMeButton } from "@/components/common";
 
 const projects = [
   {
@@ -63,61 +64,64 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <motion.section
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 20,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.5, duration: 0.5, ease: "circInOut" },
-        },
-      }}
-      className="lg:mx-26 mx-8 flex flex-1 flex-col py-12"
-    >
-      <h2 className="mb-4 text-center text-3xl font-bold">My Projects</h2>
-      <p className="mb-8 text-center text-gray-800">here are some of the personal projects that I have worked on</p>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <Card key={index} className="flex flex-col">
-            <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-1 flex-grow flex-col justify-between">
-              <CardDescription>{project.description}</CardDescription>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.technologies.map((tech, techIndex) => (
-                  <Badge key={techIndex} variant="secondary">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-            <CardFooter className="flex justify-center">
-              <Button
-                variant="outline"
-                className="flex items-center gap-2"
-                onClick={() => window.open(project.githubUrl, "_blank")}
-              >
-                <Image src="/images/logos/github.svg" alt="GitHub" height={24} width={24} />
-                View on GitHub
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-      <Button
-        variant="outline"
-        onClick={() => window.open("https://github.com/carlosescor2199", "_blank")}
-        className="mt-8 flex items-center justify-center gap-2"
+    <>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 20,
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.5, duration: 0.5, ease: "circInOut" },
+          },
+        }}
+        className="lg:mx-26 mx-8 flex flex-1 flex-col py-12"
       >
-        <Image src="/images/logos/github.svg" alt="GitHub" height={24} width={24} />
-        View More Projects
-      </Button>
-    </motion.section>
+        <h2 className="mb-4 text-center text-3xl font-bold">My Projects</h2>
+        <p className="mb-8 text-center text-gray-800">here are some of the personal projects that I have worked on</p>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <Card key={index} className="flex flex-col">
+              <CardHeader>
+                <CardTitle>{project.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex flex-1 flex-grow flex-col justify-between">
+                <CardDescription>{project.description}</CardDescription>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.technologies.map((tech, techIndex) => (
+                    <Badge key={techIndex} variant="secondary">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-center">
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2"
+                  onClick={() => window.open(project.githubUrl, "_blank")}
+                >
+                  <Image src="/images/logos/github.svg" alt="GitHub" height={24} width={24} />
+                  View on GitHub
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+        <Button
+          variant="outline"
+          onClick={() => window.open("https://github.com/carlosescor2199", "_blank")}
+          className="mt-8 flex items-center justify-center gap-2"
+        >
+          <Image src="/images/logos/github.svg" alt="GitHub" height={24} width={24} />
+          View More Projects
+        </Button>
+      </motion.section>
+      <ContactMeButton />
+    </>
   );
 }

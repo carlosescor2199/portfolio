@@ -50,7 +50,9 @@ export default function Navbar() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img alt="Your Company" src="/logo/1.png" className="h-16 w-auto" />
+              <Link href="/">
+                <img alt="Your Company" src="/logo/1.png" className="h-16 w-auto" />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navigation.map((item) => (
