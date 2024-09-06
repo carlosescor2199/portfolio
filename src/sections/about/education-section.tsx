@@ -11,7 +11,7 @@ export function EducationSection() {
         viewport={{ once: true, amount: 1 }}
         transition={{ duration: 0.7, delay: 0.5 }}
         whileInView={{ y: 0, opacity: 1 }}
-        className="mb-5 text-center text-5xl font-bold text-blue-400"
+        className="mb-5 mt-10 text-center text-5xl font-bold text-blue-400"
       >
         Education
       </motion.h2>

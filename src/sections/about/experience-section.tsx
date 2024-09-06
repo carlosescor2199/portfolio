@@ -12,7 +12,7 @@ export function ExperienceSection() {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7, delay: 0.5 }}
         whileInView={{ y: 0, opacity: 1 }}
-        className="mb-5 text-center text-5xl font-bold text-blue-400"
+        className="mb-5 mt-10 text-center text-5xl font-bold text-blue-400"
       >
         Experience
       </motion.h2>
