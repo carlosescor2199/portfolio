@@ -23,7 +23,7 @@ export function SkillsSection() {
             initial={{ y: -50, opacity: 0 }}
             animate="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: (index + 1) * 0.3 }}
+            transition={{ duration: 0.7, delay: (index + 1) * 0.08 }}
             whileInView={{ y: 0, opacity: 1 }}
             className="flex flex-col items-center"
           >
