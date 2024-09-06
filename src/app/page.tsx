@@ -126,7 +126,8 @@ export default function Home() {
               </Link>
             </motion.button>
 
-            <motion.button
+            <motion.a
+              href="mailto:carlos.escudero.corpas@gmail.com"
               initial="hidden"
               animate="visible"
               variants={{
@@ -142,14 +143,12 @@ export default function Home() {
               }}
               whileHover={{ scale: 1.1 }}
               className={cn(
-                "w-full rounded-md bg-green-400 px-4 py-2 text-white md:w-auto",
+                "w-full rounded-md bg-green-400 px-4 py-2 text-center text-white md:w-auto",
                 "hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50",
               )}
             >
-              <Link href="/contact">
-                <BriefcaseIcon className="inline h-5 w-5" /> Hire me
-              </Link>
-            </motion.button>
+              <BriefcaseIcon className="inline h-5 w-5" /> Hire me
+            </motion.a>
 
             <motion.a
               href="/Resume_Carlos_Escudero.pdf"
