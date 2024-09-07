@@ -28,7 +28,7 @@ export function SoftwareSection() {
             className="flex flex-col items-center gap-y-2"
           >
             <Image src={skill.icon} alt={skill.name} height={100} width={100} className="h-16 w-16" />
-            <span className="text-sm font-semibold text-gray-800">{skill.name}</span>
+            <span className="text-sm font-semibold text-foreground">{skill.name}</span>
           </motion.div>
         ))}
       </div>

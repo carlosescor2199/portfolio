@@ -90,8 +90,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-900/10 pt-8">
-          <p className="m-0 text-center text-xs leading-5 text-gray-500">
+        <div className="mt-8 border-t pt-8">
+          <p className="m-0 text-center text-xs leading-5 text-foreground">
             &copy; {moment().year()} Carlos Escudero, Inc. All rights reserved.
           </p>
         </div>

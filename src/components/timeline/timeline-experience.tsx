@@ -31,17 +31,17 @@ export const TimelineExperience = ({ items }: { items: WorkExperience[] }) => {
               transition={{ duration: 1, delay: (index + 1) * 0.3 }}
               whileInView={{ y: 0, opacity: 1 }}
             >
-              <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-400">
                 {moment(item.start_date).format("LL")}
               </time>
-              <span className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"> to </span>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <span className="mb-1 text-sm font-normal leading-none text-gray-400"> to </span>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-400">
                 {item.end_date ? moment(item.end_date).format("LL") : "Present"}
               </time>
               <h3 className="text-lg font-semibold text-blue-400">
                 {item.title} - {item.company}
               </h3>
-              <div className="mb-4 ml-4 text-base font-normal text-gray-700">{item.description}</div>
+              <div className="mb-4 ml-4 text-base font-normal text-gray-700 dark:text-gray-300">{item.description}</div>
             </motion.div>
           </li>
         ))}

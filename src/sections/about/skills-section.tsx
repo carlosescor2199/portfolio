@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 export function SkillsSection() {
@@ -24,9 +25,11 @@ export function SkillsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: (index + 1) * 0.08 }}
             whileInView={{ y: 0, opacity: 1 }}
-            className="flex flex-col gap-2 rounded-lg bg-gray-200 p-5"
+            className={cn("flex flex-col gap-2 rounded-lg bg-gray-200 p-5", "dark:bg-gray-800")}
           >
-            <h3 className="text-start text-base font-semibold text-gray-800">{skill.title}</h3>
+            <h3 className={cn("text-start text-base font-semibold text-gray-800", "dark:text-gray-50")}>
+              {skill.title}
+            </h3>
             <p className="text-sm">{skill.description}</p>
           </motion.div>
         ))}

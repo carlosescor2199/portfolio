@@ -31,8 +31,8 @@ export function ButtonsContainer({
           }}
           whileHover={{ scale: 1.1 }}
           className={cn(
-            "w-full rounded-md bg-white px-4 py-2 text-gray-800 ring-1 ring-gray-800",
-            "hover:bg-gray-100 focus:outline-none focus:ring-2 md:w-auto",
+            "w-full rounded-md bg-transparent px-4 py-2 text-foreground ring-1 ring-foreground",
+            "focus:outline-none focus:ring-2 md:w-auto",
           )}
         >
           <Link href="/about">
@@ -59,8 +59,8 @@ export function ButtonsContainer({
           }}
           whileHover={{ scale: 1.1 }}
           className={cn(
-            "w-full rounded-md bg-white px-4 py-2 text-gray-800 ring-1 ring-gray-800",
-            "hover:bg-gray-100 focus:outline-none focus:ring-2 md:w-auto",
+            "w-full rounded-md bg-transparent px-4 py-2 text-foreground ring-1 ring-foreground",
+            "focus:outline-none focus:ring-2 md:w-auto",
           )}
         >
           <Link href="/projects">
@@ -89,7 +89,7 @@ export function ButtonsContainer({
           }}
           whileHover={{ scale: 1.1 }}
           className={cn(
-            "w-full rounded-md bg-gray-800 px-4 py-2 text-center text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 md:w-auto",
+            "w-full rounded-md bg-foreground px-4 py-2 text-center text-background focus:outline-none focus:ring-2 md:w-auto",
           )}
         >
           <ArrowDownTrayIcon className="inline h-5 w-5" /> Download Resume

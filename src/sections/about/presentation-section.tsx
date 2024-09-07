@@ -37,7 +37,7 @@ export function PresentationSection() {
               transition: { delay: 0.5, duration: 0.5, ease: "circInOut" },
             },
           }}
-          className={cn("mt-7 text-4xl font-bold text-gray-700")}
+          className={cn("mt-7 text-4xl font-bold text-foreground")}
         >
           Carlos Escudero
         </motion.h1>
@@ -53,7 +53,7 @@ export function PresentationSection() {
               transition: { delay: 1, duration: 0.5, ease: "linear" },
             },
           }}
-          className={cn(questrial.className, "text-2xl font-bold text-gray-500")}
+          className={cn(questrial.className, "text-2xl font-bold text-foreground/80")}
         >
           Software Engineer
         </motion.p>
@@ -71,7 +71,7 @@ export function PresentationSection() {
               transition: { delay: 1.5, duration: 0.5, ease: "linear" },
             },
           }}
-          className="text-gray-600"
+          className="text-foreground/90"
         >
           Hi! I&apos;m a Fullstack Software Engineer based in Sincelejo, Colombia. I have more than three years
           developing APIs and robust applications. I have participated in several projects, from electronic invoicing

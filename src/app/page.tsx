@@ -25,7 +25,7 @@ export default function Home() {
           className={cn("grid flex-1 p-8 pb-5 md:grid-cols-2 xl:p-24")}
         >
           <div className="flex flex-col justify-center space-y-8">
-            <h1 className={cn("text-center text-4xl font-extrabold text-gray-800 sm:text-5xl md:text-start")}>
+            <h1 className={cn("text-center text-4xl font-extrabold text-foreground sm:text-5xl md:text-start")}>
               Limitless Innovation in Software Development
             </h1>
             <p>

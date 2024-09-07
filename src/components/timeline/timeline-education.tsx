@@ -31,21 +31,18 @@ export function TimelineEducation({ items }: { items: Education[] }) {
               whileInView={{ y: 0, opacity: 1 }}
             >
               <h3 className="text-lg font-semibold text-blue-400">{item.degree}</h3>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              <time className="mb-1 text-sm font-normal leading-none text-gray-400">
                 {moment(item.start_date).year()}
               </time>
               {moment(item.start_date).year() !== moment(item.end_date).year() && (
                 <>
-                  <span className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"> to </span>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  <span className="mb-1 text-sm font-normal leading-none text-gray-400"> to </span>
+                  <time className="mb-1 text-sm font-normal leading-none text-gray-400">
                     {item.end_date ? moment(item.end_date).year() : "Present"}
                   </time>
                 </>
               )}
-              <span className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                {" "}
-                | {item.school}{" "}
-              </span>
+              <span className="mb-1 text-sm font-normal leading-none text-gray-400"> | {item.school} </span>
             </motion.div>
           </li>
         ))}
