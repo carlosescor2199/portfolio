@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="relative flex h-16 justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-600">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-background hover:text-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-600">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
@@ -76,13 +76,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      <DisclosurePanel className="absolute z-10 w-full bg-white sm:hidden">
+      <DisclosurePanel className="absolute z-10 w-full bg-background sm:hidden">
         <div className="space-y-1 pb-4 pt-2">
           {navigation.map((item) => (
             <Link key={item.name} href={item.href} onClick={() => activeNavigation(item.href)}>
               <DisclosureButton
-                className={cn("block w-full py-2 pl-3 pr-4 text-base font-medium text-gray-700", {
-                  "border-l-4 border-gray-700 bg-gray-100": item.active,
+                className={cn("block w-full py-2 pl-3 pr-4 text-base font-medium text-foreground", {
+                  "border-l-4 border-gray-700 bg-foreground text-background": item.active,
                 })}
               >
                 {item.name}
