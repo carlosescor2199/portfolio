@@ -71,7 +71,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer aria-labelledby="footer-heading" className="bg-white">
+    <footer aria-labelledby="footer-heading" className="bg-background">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -79,10 +79,10 @@ export default function Footer() {
         <div className="flex justify-center xl:gap-8">
           <div className="flex flex-col items-center space-y-8">
             <img alt="Carlos Escudero" src="/logo/1.png" className="h-28 w-28 text-center" />
-            <p className="text-sm text-gray-600">Creating solutions, overcoming limits.</p>
+            <p className="text-sm text-foreground">Creating solutions, overcoming limits.</p>
             <div className="flex justify-center space-x-6">
               {navigation.social.map((item) => (
-                <Link key={item.name} href={item.href} target="_blank" className="text-gray-400 hover:text-gray-500">
+                <Link key={item.name} href={item.href} target="_blank" className="text-foreground hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="h-6 w-6" />
                 </Link>
