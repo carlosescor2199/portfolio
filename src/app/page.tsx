@@ -51,7 +51,7 @@ export default function Home() {
               }}
               src="/images/home-page.png"
               alt="logo"
-              className={cn("rounded-full bg-transparent pt-1")}
+              className={cn("bg-transparent pt-1")}
             />
           </div>
         </motion.div>

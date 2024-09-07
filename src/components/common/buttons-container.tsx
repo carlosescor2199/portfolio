@@ -63,7 +63,7 @@ export function ButtonsContainer({
             "hover:bg-gray-100 focus:outline-none focus:ring-2 md:w-auto",
           )}
         >
-          <Link href="/about">
+          <Link href="/projects">
             {" "}
             <RectangleStackIcon className="inline h-5 w-5" /> Get to know my projects!
           </Link>

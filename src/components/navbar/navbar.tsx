@@ -7,6 +7,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "../common";
 
 const NAVIGATION = [
   { name: "Home", href: "/", active: false },
@@ -36,7 +37,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-background shadow dark:bg-background">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -48,25 +49,28 @@ export default function Navbar() {
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <Link href="/">
-                <img alt="Your Company" src="/logo/1.png" className="h-16 w-auto" />
-              </Link>
-            </div>
+          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={cn("inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900", {
-                    "border-b-2 border-gray-700": item.active,
+                  className={cn("inline-flex items-center px-1 pt-1 text-sm font-medium text-foreground", {
+                    "border-b-2 border-foreground": item.active,
                   })}
                   onClick={() => activeNavigation(item.href)}
                 >
                   {item.name}
                 </Link>
               ))}
+            </div>
+            <div className="relative flex flex-shrink-0 items-center sm:absolute sm:left-1/2">
+              <Link href="/">
+                <img alt="Your Company" src="/logo/1.png" className="h-16 w-auto" />
+              </Link>
+            </div>
+            <div className="absolute right-0 flex flex-shrink-0 items-center sm:relative">
+              <ThemeToggle />
             </div>
           </div>
         </div>
