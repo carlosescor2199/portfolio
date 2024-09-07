@@ -34,7 +34,7 @@ export default function Home() {
               success. My mission is to exceed expectations through agile, tailored development, delivering technology
               solutions that make a difference.
             </p>
-            <ButtonsContainer />
+            <ButtonsContainer about download />
           </div>
           <div className="flex items-center">
             <motion.img
