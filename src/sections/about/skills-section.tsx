@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function SkillsSection() {
   return (
@@ -16,19 +15,19 @@ export function SkillsSection() {
       >
         Skills
       </motion.h2>
-      <div className="mb-10 grid grid-cols-2 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="mb-10 grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
         {SKILLS.map((skill, index) => (
           <motion.div
-            key={skill.name}
+            key={skill.title}
             initial={{ y: -50, opacity: 0 }}
             animate="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: (index + 1) * 0.08 }}
             whileInView={{ y: 0, opacity: 1 }}
-            className="flex flex-col items-center"
+            className="flex flex-col gap-2 rounded-lg bg-gray-200 p-5"
           >
-            <Image src={skill.icon} alt={skill.name} height={100} width={100} className="h-16 w-16" />
-            <span className="text-sm font-semibold text-gray-800">{skill.name}</span>
+            <h3 className="text-start text-base font-semibold text-gray-800">{skill.title}</h3>
+            <p className="text-sm">{skill.description}</p>
           </motion.div>
         ))}
       </div>
@@ -38,83 +37,71 @@ export function SkillsSection() {
 
 const SKILLS = [
   {
-    name: "JavaScript",
-    icon: "/images/logos/javascript.svg",
+    title: "Fullstack Development",
+    description:
+      "Experience working on both frontend and backend using technologies such as React.js, Angular, NextJS, and Node.js.",
   },
   {
-    name: "TypeScript",
-    icon: "/images/logos/typescript.svg",
+    title: "API Integration",
+    description:
+      "Extensive experience integrating external APIs like DIAN (for electronic invoicing) and FlightAware (for flight data).",
   },
   {
-    name: "Node.js",
-    icon: "/images/logos/nodejs.svg",
+    title: "Frontend Technologies",
+    description: "Proficiency in building engaging and functional user interfaces with React, AngularJS, and Next.js.",
   },
   {
-    name: "React",
-    icon: "/images/logos/react.svg",
+    title: "Backend Technologies",
+    description: "Backend development using Express, Node.js, NestJS, and Spring Boot.",
   },
   {
-    name: "Next.js",
-    icon: "/images/logos/nextjs.svg",
+    title: "Database Management",
+    description: "Managing and optimizing databases such as MongoDB, PostgreSQL, and Redis.",
   },
   {
-    name: "Angular",
-    icon: "/images/logos/angular.svg",
+    title: "AI and Machine Learning Integration",
+    description: "Implemented AI-powered features like generative chat systems using OpenAI and LLMs.",
   },
   {
-    name: "Vue.js",
-    icon: "/images/logos/vuejs.svg",
+    title: "Data Processing",
+    description: "Experience in processing and formatting data for optimal compatibility and usability.",
   },
   {
-    name: "Express",
-    icon: "/images/logos/expressjs.svg",
+    title: "Deployment and Infrastructure",
+    description: "Deployed applications on platforms like DigitalOcean, ensuring scalability and reliability.",
   },
   {
-    name: "NestJS",
-    icon: "/images/logos/nestjs.svg",
+    title: "Problem-Solving",
+    description: "Designed innovative solutions such as routing algorithms based on fuel costs, tolls, and mileage.",
   },
   {
-    name: "Spring Boot",
-    icon: "/images/logos/spring-boot.svg",
+    title: "Project Management",
+    description:
+      "Collaborated with teams and managed projects to ensure seamless integration and optimal system performance.",
   },
   {
-    name: "Go",
-    icon: "/images/logos/go.svg",
+    title: "Mentoring",
+    description: "Passionate about guiding emerging tech enthusiasts through the evolving tech landscape.",
   },
   {
-    name: "Python",
-    icon: "/images/logos/python.svg",
+    title: "Adaptability",
+    description: "Ability to quickly adjust to new technologies and dynamic work environments.",
   },
   {
-    name: "MongoDB",
-    icon: "/images/logos/mongodb.svg",
+    title: "Communication",
+    description:
+      "Skilled at conveying technical ideas clearly in both English and Spanish, enabling effective collaboration.",
   },
   {
-    name: "MySQL",
-    icon: "/images/logos/mysql.svg",
+    title: "Team Collaboration",
+    description: "Proven experience working effectively in multidisciplinary teams to ensure project success.",
   },
   {
-    name: "PostgreSQL",
-    icon: "/images/logos/postgresql.svg",
+    title: "Problem-Solving",
+    description: "Proactive and creative approach to identifying and resolving complex challenges efficiently.",
   },
   {
-    name: "Redis",
-    icon: "/images/logos/redis.svg",
-  },
-  {
-    name: "Docker",
-    icon: "/images/logos/docker.svg",
-  },
-  {
-    name: "Kubernetes",
-    icon: "/images/logos/kubernetes.svg",
-  },
-  {
-    name: "AWS",
-    icon: "/images/logos/aws.svg",
-  },
-  {
-    name: "Google Cloud Platform",
-    icon: "/images/logos/gcp.svg",
+    title: "Attention to Detail",
+    description: "Strong attention to technical details, ensuring the delivery of high-quality solutions.",
   },
 ];

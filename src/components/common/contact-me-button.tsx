@@ -9,6 +9,8 @@ export function ContactMeButton() {
       initial="hidden"
       animate="visible"
       whileHover={{ scale: 1.2 }}
+      whileFocus={{ scale: 1.2 }}
+      whileTap={{ scale: 1.4 }}
       className={cn(
         "fixed bottom-5 right-5 md:bottom-10 md:right-10",
         "h-24 w-24 rounded-full bg-white px-4 py-2 text-center text-gray-800 ring-1 ring-gray-800",

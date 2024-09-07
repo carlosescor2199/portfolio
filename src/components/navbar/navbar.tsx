@@ -75,16 +75,15 @@ export default function Navbar() {
       <DisclosurePanel className="absolute z-10 w-full bg-white sm:hidden">
         <div className="space-y-1 pb-4 pt-2">
           {navigation.map((item) => (
-            <DisclosureButton
-              key={item.name}
-              className={cn("block w-full py-2 pl-3 pr-4 text-base font-medium text-gray-700", {
-                "border-l-4 border-gray-700 bg-gray-100": item.active,
-              })}
-            >
-              <Link href={item.href} onClick={() => activeNavigation(item.href)}>
+            <Link key={item.name} href={item.href} onClick={() => activeNavigation(item.href)}>
+              <DisclosureButton
+                className={cn("block w-full py-2 pl-3 pr-4 text-base font-medium text-gray-700", {
+                  "border-l-4 border-gray-700 bg-gray-100": item.active,
+                })}
+              >
                 {item.name}
-              </Link>
-            </DisclosureButton>
+              </DisclosureButton>
+            </Link>
           ))}
         </div>
       </DisclosurePanel>

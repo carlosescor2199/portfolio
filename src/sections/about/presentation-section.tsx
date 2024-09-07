@@ -21,9 +21,9 @@ export function PresentationSection() {
               transition: { delay: 0.7, duration: 0.5, ease: "circIn" },
             },
           }}
-          src="/images/profileimg.png"
+          src="/images/profile.png"
           alt="logo"
-          className={cn("h-36 w-36 rounded-full border border-gray-400 bg-transparent pt-1 sm:h-52 sm:w-52")}
+          className={cn("h-36 w-36 rounded-full sm:h-52 sm:w-52")}
         />
         <motion.h1
           initial="hidden"
@@ -58,7 +58,7 @@ export function PresentationSection() {
           Software Engineer
         </motion.p>
       </div>
-      <div className="flex flex-col justify-center 2xl:mx-80">
+      <div className="mb-12 flex flex-col justify-center 2xl:mx-80">
         <motion.p
           initial="hidden"
           animate="visible"

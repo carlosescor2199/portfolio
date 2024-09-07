@@ -34,10 +34,14 @@ export function TimelineEducation({ items }: { items: Education[] }) {
               <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 {moment(item.start_date).year()}
               </time>
-              <span className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"> to </span>
-              <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                {item.end_date ? moment(item.end_date).year() : "Present"}
-              </time>
+              {moment(item.start_date).year() !== moment(item.end_date).year() && (
+                <>
+                  <span className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"> to </span>
+                  <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                    {item.end_date ? moment(item.end_date).year() : "Present"}
+                  </time>
+                </>
+              )}
               <span className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 {" "}
                 | {item.school}{" "}

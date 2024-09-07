@@ -22,10 +22,10 @@ export default function Home() {
               transition: { delay: 0.3, duration: 0.6, ease: "backInOut" },
             },
           }}
-          className={cn("grid flex-1 grid-cols-2 p-8 pb-5 xl:p-24")}
+          className={cn("grid flex-1 p-8 pb-5 md:grid-cols-2 xl:p-24")}
         >
-          <div className="space-y-8">
-            <h1 className="mt-24 text-5xl font-extrabold text-gray-800">
+          <div className="flex flex-col justify-center space-y-8">
+            <h1 className={cn("text-center text-4xl font-extrabold text-gray-800 sm:text-5xl md:text-start")}>
               Limitless Innovation in Software Development
             </h1>
             <p>
@@ -36,22 +36,24 @@ export default function Home() {
             </p>
             <ButtonsContainer />
           </div>
-          <motion.img
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {
-                opacity: 0,
-              },
-              visible: {
-                opacity: 1,
-                transition: { delay: 0.3, duration: 0.5, ease: "linear" },
-              },
-            }}
-            src="/images/home-page.png"
-            alt="logo"
-            className={cn("rounded-full bg-transparent pt-1")}
-          />
+          <div className="flex items-center">
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+                visible: {
+                  opacity: 1,
+                  transition: { delay: 0.3, duration: 0.5, ease: "linear" },
+                },
+              }}
+              src="/images/home-page.png"
+              alt="logo"
+              className={cn("rounded-full bg-transparent pt-1")}
+            />
+          </div>
         </motion.div>
       </main>
       <ContactMeButton />
