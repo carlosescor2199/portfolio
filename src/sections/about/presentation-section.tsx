@@ -80,7 +80,7 @@ export function PresentationSection() {
           professional growth, I like to guide new tech enthusiasts, helping them to learn and navigate in this
           constantly evolving world.
         </motion.p>
-        <ButtonsContainer />
+        <ButtonsContainer onlyResume />
       </div>
     </>
   );

@@ -3,34 +3,36 @@ import { ArrowDownTrayIcon, IdentificationIcon } from "@heroicons/react/24/outli
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export function ButtonsContainer() {
+export function ButtonsContainer({ onlyResume = false }: { onlyResume?: boolean }) {
   return (
     <motion.div className="mt-10 flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-8">
-      <motion.button
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {
-            opacity: 0,
-            x: -20,
-          },
-          visible: {
-            opacity: 1,
-            x: 0,
-            transition: { delay: 1.7, duration: 0.5, ease: "linear" },
-          },
-        }}
-        whileHover={{ scale: 1.1 }}
-        className={cn(
-          "w-full rounded-md bg-white px-4 py-2 text-gray-800 ring-1 ring-gray-800",
-          "hover:bg-gray-100 focus:outline-none focus:ring-2 md:w-auto",
-        )}
-      >
-        <Link href="/about">
-          {" "}
-          <IdentificationIcon className="inline h-5 w-5" /> More about me
-        </Link>
-      </motion.button>
+      {!onlyResume && (
+        <motion.button
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              opacity: 0,
+              x: -20,
+            },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { delay: 1.7, duration: 0.5, ease: "linear" },
+            },
+          }}
+          whileHover={{ scale: 1.1 }}
+          className={cn(
+            "w-full rounded-md bg-white px-4 py-2 text-gray-800 ring-1 ring-gray-800",
+            "hover:bg-gray-100 focus:outline-none focus:ring-2 md:w-auto",
+          )}
+        >
+          <Link href="/about">
+            {" "}
+            <IdentificationIcon className="inline h-5 w-5" /> More about me
+          </Link>
+        </motion.button>
+      )}
 
       <motion.a
         href="/Resume_Carlos_Escudero.pdf"

@@ -51,7 +51,7 @@ const SOFTWARES = [
   },
   {
     name: "Slack",
-    icon: "/images/logos/Slack.svg",
+    icon: "/images/logos/slack.svg",
   },
   {
     name: "Davinchi Resolve",
