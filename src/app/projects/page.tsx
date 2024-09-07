@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
 import { ContactMeButton } from "@/components/common";
 
 const projects = [
@@ -82,7 +81,9 @@ export default function ProjectsPage() {
         className="lg:mx-26 mx-8 flex flex-1 flex-col py-12"
       >
         <h2 className="mb-4 text-center text-3xl font-bold">My Projects</h2>
-        <p className="mb-8 text-center text-gray-800">here are some of the personal projects that I have worked on</p>
+        <p className="mb-8 text-center text-gray-800 dark:text-gray-200">
+          here are some of the personal projects that I have worked on
+        </p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Card key={index} className="flex flex-col">

@@ -2,6 +2,7 @@
 import moment from "moment";
 import Link from "next/link";
 import { JSX, SVGProps } from "react";
+import { Logo } from "../common";
 
 const navigation = {
   social: [
@@ -78,7 +79,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
         <div className="flex justify-center xl:gap-8">
           <div className="flex flex-col items-center space-y-8">
-            <img alt="Carlos Escudero" src="/logo/1.png" className="h-28 w-28 text-center" />
+            <Logo className="h-28 w-28 fill-foreground" />
             <p className="text-sm text-foreground">Creating solutions, overcoming limits.</p>
             <div className="flex justify-center space-x-6">
               {navigation.social.map((item) => (

@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ThemeToggle } from "../common";
+import { Logo, ThemeToggle } from "../common";
 
 const NAVIGATION = [
   { name: "Home", href: "/", active: false },
@@ -66,7 +66,7 @@ export default function Navbar() {
             </div>
             <div className="relative flex flex-shrink-0 items-center sm:absolute sm:left-1/2">
               <Link href="/">
-                <img alt="Your Company" src="/logo/1.png" className="h-16 w-auto" />
+                <Logo className="h-20 w-auto fill-foreground" />
               </Link>
             </div>
             <div className="absolute right-0 flex flex-shrink-0 items-center sm:relative">
