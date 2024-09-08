@@ -1,7 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import {
+  AdobePhotoshopIcon,
+  AdobePremiereIcon,
+  DavinciResolveIcon,
+  ExcelIcon,
+  IntellijIcon,
+  JiraIcon,
+  PyCharmIcon,
+  SlackIcon,
+  VSCodeIcon,
+} from "@/components/common";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function SoftwareSection() {
   return (
@@ -25,9 +35,9 @@ export function SoftwareSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: (index + 1) * 0.08 }}
             whileInView={{ y: 0, opacity: 1 }}
-            className="flex flex-col items-center gap-y-2"
+            className="flex flex-col items-center gap-y-3"
           >
-            <Image src={skill.icon} alt={skill.name} height={100} width={100} className="h-16 w-16" />
+            {skill.icon}
             <span className="text-sm font-semibold text-foreground">{skill.name}</span>
           </motion.div>
         ))}
@@ -39,38 +49,38 @@ export function SoftwareSection() {
 const SOFTWARES = [
   {
     name: "Visual Studio Code",
-    icon: "/images/logos/vscode.svg",
+    icon: <VSCodeIcon className="h-16 w-16" />,
   },
   {
     name: "IntelliJ IDEA",
-    icon: "/images/logos/intellij-idea.svg",
+    icon: <IntellijIcon className="h-16 w-16" />,
   },
   {
     name: "Jira",
-    icon: "/images/logos/jira.svg",
+    icon: <JiraIcon className="h-16 w-16" />,
   },
   {
     name: "Slack",
-    icon: "/images/logos/slack.svg",
+    icon: <SlackIcon className="h-16 w-16" />,
   },
   {
     name: "Davinchi Resolve",
-    icon: "/images/logos/davinci.svg",
+    icon: <DavinciResolveIcon className="h-16 w-16" />,
   },
   {
     name: "Adobe Premiere",
-    icon: "/images/logos/premiere.svg",
+    icon: <AdobePremiereIcon className="h-16 w-16" />,
   },
   {
     name: "Adobe Photoshop",
-    icon: "/images/logos/photoshop.svg",
+    icon: <AdobePhotoshopIcon className="h-16 w-16" />,
   },
   {
     name: "Excel",
-    icon: "/images/logos/excel.svg",
+    icon: <ExcelIcon className="h-16 w-16" />,
   },
   {
     name: "Pycharm",
-    icon: "/images/logos/pycharm.svg",
+    icon: <PyCharmIcon className="h-16 w-16 fill-foreground text-background" />,
   },
 ];

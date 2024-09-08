@@ -1,7 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import {
+  AngularIcon,
+  AWSIcon,
+  DockerIcon,
+  ExpressIcon,
+  GCPIcon,
+  GoIcon,
+  JavaScriptIcon,
+  KubernetesIcon,
+  MongoDBIcon,
+  MySQLIcon,
+  NestJSIcon,
+  NextJSIcon,
+  NodeJSIcon,
+  PostgreSQLIcon,
+  PythonIcon,
+  ReactIcon,
+  RedisIcon,
+  SpringBootIcon,
+  TypeScriptIcon,
+  VueJSIcon,
+} from "@/components/common";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function TechnologySection() {
   return (
@@ -25,9 +46,9 @@ export function TechnologySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: (index + 1) * 0.08 }}
             whileInView={{ y: 0, opacity: 1 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center gap-y-3"
           >
-            <Image src={skill.icon} alt={skill.name} height={100} width={100} className="h-16 w-16" />
+            {skill.icon}
             <span className="text-sm font-semibold text-foreground">{skill.name}</span>
           </motion.div>
         ))}
@@ -39,82 +60,82 @@ export function TechnologySection() {
 const TECHNOLOGIES = [
   {
     name: "JavaScript",
-    icon: "/images/logos/javascript.svg",
+    icon: <JavaScriptIcon className="h-16 w-16" />,
   },
   {
     name: "TypeScript",
-    icon: "/images/logos/typescript.svg",
+    icon: <TypeScriptIcon className="h-16 w-16" />,
   },
   {
     name: "Node.js",
-    icon: "/images/logos/nodejs.svg",
+    icon: <NodeJSIcon className="h-16 w-16" />,
   },
   {
     name: "React",
-    icon: "/images/logos/react.svg",
+    icon: <ReactIcon className="h-16 w-16" />,
   },
   {
     name: "Next.js",
-    icon: "/images/logos/nextjs.svg",
+    icon: <NextJSIcon className="h-16 w-16" />,
   },
   {
     name: "Angular",
-    icon: "/images/logos/angular.svg",
+    icon: <AngularIcon className="h-16 w-16" />,
   },
   {
     name: "Vue.js",
-    icon: "/images/logos/vuejs.svg",
+    icon: <VueJSIcon className="h-16 w-16" />,
   },
   {
     name: "Express",
-    icon: "/images/logos/expressjs.svg",
+    icon: <ExpressIcon className="h-16 w-16 fill-foreground" />,
   },
   {
     name: "NestJS",
-    icon: "/images/logos/nestjs.svg",
+    icon: <NestJSIcon className="h-16 w-16" />,
   },
   {
     name: "Spring Boot",
-    icon: "/images/logos/spring-boot.svg",
+    icon: <SpringBootIcon className="h-16 w-16" />,
   },
   {
     name: "Go",
-    icon: "/images/logos/go.svg",
+    icon: <GoIcon className="h-16 w-16" />,
   },
   {
     name: "Python",
-    icon: "/images/logos/python.svg",
+    icon: <PythonIcon className="h-16 w-16" />,
   },
   {
     name: "MongoDB",
-    icon: "/images/logos/mongodb.svg",
+    icon: <MongoDBIcon className="h-16 w-16" />,
   },
   {
     name: "MySQL",
-    icon: "/images/logos/mysql.svg",
+    icon: <MySQLIcon className="h-16 w-16 fill-foreground" />,
   },
   {
     name: "PostgreSQL",
-    icon: "/images/logos/postgresql.svg",
+    icon: <PostgreSQLIcon className="h-16 w-16" />,
   },
   {
     name: "Redis",
-    icon: "/images/logos/redis.svg",
+    icon: <RedisIcon className="h-16 w-16" />,
   },
   {
     name: "Docker",
-    icon: "/images/logos/docker.svg",
+    icon: <DockerIcon className="h-16 w-16" />,
   },
   {
     name: "Kubernetes",
-    icon: "/images/logos/kubernetes.svg",
+    icon: <KubernetesIcon className="h-16 w-16" />,
   },
   {
-    name: "AWS",
-    icon: "/images/logos/aws.svg",
+    name: "Amazon Web Services",
+    icon: <AWSIcon className="h-16 w-16 fill-foreground" />,
   },
   {
     name: "Google Cloud Platform",
-    icon: "/images/logos/gcp.svg",
+    icon: <GCPIcon className="h-16 w-16" />,
   },
 ];
