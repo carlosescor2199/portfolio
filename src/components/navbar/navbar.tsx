@@ -76,7 +76,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <DisclosurePanel className="absolute z-10 w-full bg-background sm:hidden">
+      <DisclosurePanel className="fixed top-16 z-10 w-full bg-background sm:hidden">
         <div className="space-y-1 pb-4 pt-2">
           {navigation.map((item) => (
             <Link key={item.name} href={item.href} onClick={() => activeNavigation(item.href)}>

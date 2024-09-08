@@ -7,7 +7,7 @@ import { ButtonsContainer, ContactMeButton } from "@/components/common";
 export default function Home() {
   return (
     <>
-      <main className={cn("flex flex-1 flex-col")}>
+      <main className={cn("flex flex-1 flex-col pt-16")}>
         <motion.div
           initial="hidden"
           animate="visible"
