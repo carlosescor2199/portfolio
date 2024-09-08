@@ -78,7 +78,7 @@ export default function ProjectsPage() {
             transition: { delay: 0.5, duration: 0.5, ease: "circInOut" },
           },
         }}
-        className="lg:mx-26 mx-8 flex flex-1 flex-col py-12"
+        className="lg:mx-26 mx-8 mt-24 flex flex-1 flex-col py-12"
       >
         <h2 className="mb-4 text-center text-3xl font-bold">My Projects</h2>
         <p className="mb-8 text-center text-gray-800 dark:text-gray-200">

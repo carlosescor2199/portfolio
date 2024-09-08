@@ -14,7 +14,7 @@ import { cn } from "@/utils/cn";
 export default function page() {
   return (
     <>
-      <main className={cn("flex flex-1 flex-col px-6 py-10", "lg:px-24 lg:py-12")}>
+      <main className={cn("mt-20 flex flex-1 flex-col px-6 py-10", "lg:px-24 lg:py-12")}>
         <PresentationSection />
         <hr />
         <SkillsSection />
