@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { SVGProps } from "react";
+import { JSX, SVGProps } from "react";
 
 export const AngularIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
   <svg
@@ -682,6 +682,25 @@ export const ExcelIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElemen
   </svg>
 );
 
+export const GraphQLIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px" {...props}>
+    <path
+      fill="#e535ab"
+      d="M24.5,1.5v6 M24.5,40.5v6 M7.5,10l5.2,3 M35.3,35l5.2,3 M7.5,38l5.2-3 M35.3,13l5.2-3 M3,16.5l17,9.8 M28,21.7l17-9.8 M3,31.5l17-9.8 M28,26.3l17,9.8 M20.5,43.5L24.5,45l4-1.5 M20.5,4.5L24.5,3l4,1.5"
+    />
+    <path fill="#e535ab" d="M24.5,1.5a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M24.5,41.5a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M7.5,10a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M7.5,33a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M40.5,10a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M40.5,33a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M3,16.5a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M3,26.5a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M45,16.5a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+    <path fill="#e535ab" d="M45,26.5a2.5,2.5 0 1,0 0,5 a2.5,2.5 0 1,0 0,-5Z" />
+  </svg>
+);
+
 export const PyCharmIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
   <svg
     width="800px"
@@ -759,5 +778,18 @@ export const PyCharmIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElem
         fill="#FFFFFF"
       />
     </g>
+  </svg>
+);
+
+// lucide-react dropped brand/logo icons (including GitHub) some releases ago,
+// so this stays a plain inline SVG — the standard GitHub mark, currentColor
+// so it inherits text color like the rest of the mono UI.
+export const GithubIcon = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+  <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+    />
   </svg>
 );

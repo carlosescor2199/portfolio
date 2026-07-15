@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import moment from "moment";
 import Link from "next/link";
 import { JSX, SVGProps } from "react";
 import { Logo } from "../common";
@@ -8,7 +6,7 @@ const navigation = {
   social: [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/carlos-escudero-a07a25142/",
+      href: "https://www.linkedin.com/in/carlosescor",
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg
           fill="currentColor"
@@ -64,7 +62,7 @@ const navigation = {
     },
     {
       name: "X",
-      href: "https://x.com/carlosescor2199?t=AxkdHrIDmPh6Ir3_Qxw8TA&s=09",
+      href: "https://x.com/escordev",
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
@@ -86,7 +84,7 @@ const navigation = {
     },
     {
       name: "YouTube",
-      href: "https://www.youtube.com/@carlosescor",
+      href: "https://www.youtube.com/@escordev",
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -102,29 +100,33 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer aria-labelledby="footer-heading" className="bg-background">
+    <footer aria-labelledby="footer-heading" className="border-t border-line bg-background">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-        <div className="flex justify-center xl:gap-8">
-          <div className="flex flex-col items-center space-y-8">
-            <Logo className="h-28 w-28 fill-foreground" />
-            <p className="text-sm text-foreground">Creating solutions, overcoming limits.</p>
-            <div className="flex justify-center space-x-6">
-              {navigation.social.map((item) => (
-                <Link key={item.name} href={item.href} target="_blank" className="text-foreground hover:text-gray-500">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon aria-hidden="true" className="h-6 w-6" />
-                </Link>
-              ))}
-            </div>
+      <div className="mx-auto max-w-6xl px-6 py-12 md:px-16">
+        <div className="flex flex-col items-center gap-6">
+          <Logo className="h-14 w-14 fill-foreground" />
+          <div className="flex gap-6">
+            {navigation.social.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted transition-colors hover:text-circuit"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon aria-hidden="true" className="h-5 w-5" />
+              </Link>
+            ))}
           </div>
         </div>
-        <div className="mt-8 border-t pt-8">
-          <p className="m-0 text-center text-xs leading-5 text-foreground">
-            &copy; {moment().year()} Carlos Escudero, Inc. All rights reserved.
+        <div className="mt-10 flex flex-col items-center gap-2 border-t border-line pt-8 text-center">
+          <p className="font-mono text-xs tracking-widest text-muted uppercase">
+            Creating solutions, overcoming limits.
           </p>
+          <p className="font-mono text-xs text-muted">&copy; {new Date().getFullYear()} Carlos Escudero</p>
         </div>
       </div>
     </footer>
