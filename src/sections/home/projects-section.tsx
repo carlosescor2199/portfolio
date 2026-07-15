@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GithubIcon } from "@/components/common";
 import { PRODUCTS, PROJECTS } from "@/data/projects";
 import { SectionLabel } from "./section-label";
@@ -21,16 +22,25 @@ export function ProjectsSection() {
             className="group flex flex-col justify-between gap-8 bg-background p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-panel md:p-10"
           >
             <div className="flex flex-col gap-3">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[11px] tracking-widest text-muted uppercase">{product.tagline}</span>
+              <div className="flex items-start justify-between">
+                {/* Brand marks (isotypes) in their original colors — the wordmarks stay on each product's own site, and the card title already names them. */}
+                <Image
+                  src={product.logo}
+                  alt={`${product.title} logo`}
+                  width={56}
+                  height={56}
+                  unoptimized
+                  className="h-12 w-auto object-contain opacity-90 transition-opacity group-hover:opacity-100"
+                />
                 <span className="flex items-center gap-2 font-mono text-[11px] tracking-widest text-circuit uppercase">
                   <span className="h-1.5 w-1.5 rounded-full bg-circuit" aria-hidden="true" />
                   Live
                 </span>
               </div>
-              <h3 className="font-display text-3xl font-bold uppercase transition-colors group-hover:text-circuit sm:text-4xl">
+              <h3 className="mt-2 font-display text-3xl font-bold uppercase transition-colors group-hover:text-circuit sm:text-4xl">
                 {product.title}
               </h3>
+              <p className="font-mono text-[11px] tracking-widest text-muted uppercase">{product.tagline}</p>
               <p className="max-w-md text-sm text-foreground/75">{product.description}</p>
             </div>
             <span className="font-mono text-xs tracking-widest text-muted uppercase transition-colors group-hover:text-circuit">

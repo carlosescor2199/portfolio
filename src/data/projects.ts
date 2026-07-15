@@ -3,6 +3,7 @@ export type Product = {
   tagline: string;
   description: string;
   url: string;
+  logo: string;
 };
 
 export type Project = {
@@ -18,12 +19,14 @@ export const PRODUCTS: Product[] = [
     tagline: "Smart Inventory Management",
     description: "AI-first platform for intelligent inventory management and sales optimization.",
     url: "https://primeventory.com",
+    logo: "/images/primeventory-mark.svg",
   },
   {
     title: "Flypzy",
     tagline: "The Social Network for Travelers",
     description: "Share your adventures, connect with fellow explorers, and receive tailor-made travel itineraries.",
     url: "https://flypzy.com",
+    logo: "/images/flypzy-mark.svg",
   },
 ];
 
