@@ -15,7 +15,7 @@ export function AboutSection() {
               alt="Carlos Escudero"
               fill
               sizes="(min-width: 768px) 340px, 100vw"
-              className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+              className="object-cover object-top grayscale transition-all duration-500 group-hover:grayscale-0"
             />
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 ring-1 ring-line ring-inset" />
           </div>
